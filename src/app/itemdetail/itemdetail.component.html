@@ -1,0 +1,55 @@
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+
+<div [hidden]="selectedItem">
+  <mat-spinner></mat-spinner><h4>Loading...</h4>
+</div>
+
+  <div fxFlex="40" *ngIf="selectedItem">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h3>{{selectedItem.name | uppercase}}</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <img height="325px" width=auto src={{selectedItem.image}} alt={{selectedItem.name}}>
+        <p>
+          {{selectedItem.description}}
+        </p>
+       </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions>
+        <button md-button [routerLink]="['/itemdetail', prev]">
+          <span class = "fa fa-chevron-left fa-lg"></span>
+        </button>
+        <button mat-button (click)="goBack()">BACK</button>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+        <button md-button [routerLink]="['/itemdetail', next]">
+          <span class = "fa fa-chevron-right fa-lg"></span>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div fxFlex="40" *ngIf="selectedItem">
+      <div>
+        <h3>Reviews</h3>
+      </div>
+      <mat-card *ngFor="let subitem of selectedItem.reviews">
+      <mat-card-content>
+      <span *ngFor="let c of ReviewCount(subitem.rating)">
+        <mat-icon>star</mat-icon>
+      </span>
+      <p>Comment: {{subitem.comment}}</p> 
+      <p>Author: {{subitem.author}} - {{subitem.date | date}}</p>
+    </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+
+  .name-width {
+    width: 50%;
+  }
+  .email-width {
+    width: 50%;
+  }
+
+  .contact-form {
+    min-width: 250px;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .container-form {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field.mat-form-field {
+    font-size: 26px;
+    padding: 5px;
+}

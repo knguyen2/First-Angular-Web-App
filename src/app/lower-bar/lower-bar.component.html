@@ -1,0 +1,49 @@
+<div class="container footer" 
+    fxLayout="row" 
+    fxLayout.sm="column" 
+    fxLayout.xs="column" 
+    fxLayoutAlign.xs="start center" 
+    fxLayoutAlign.sm="start center"
+    fxLayoutAlign.gt-sm="center center" 
+    fxLayoutWrap 
+    fxLayoutGap="10px">
+
+  <div fxFlex="100%" fxFlex.gt-sm="50%">
+    <div fxLayout="row">
+      <div fxFlex="40" fxFlexOffset="20px">
+        <h4>Links</h4>
+        <mat-list>
+          <mat-list-item><a mat-button routerLink='/home'>Home</a></mat-list-item>
+          <mat-list-item><a mat-button routerLink='/menu'>Menu</a></mat-list-item>  
+          <mat-list-item><a mat-button routerLink='/aboutus'>About us</a></mat-list-item>
+          <mat-list-item><a mat-button routerLink='/contactus'>Contact us</a></mat-list-item>
+        </mat-list>
+      </div>
+      <div fxFlex="50">
+        <h4>Address</h4>
+        <address style="text-size: 80%">
+          Enter your address<br>124 Watson Road, Richmond, VA 23234<br>
+          <i class="fa fa-phone"></i>: +1 804 354 2335<br>
+          <i class="fa fa-fax"></i>: +1 804 543 2355<br>
+          <i class="fa fa-envelope"></i>:
+          <a href="mailto:youremail@email.net"> pizzaworld@gmail.com </a>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="100%" fxFlex.gt-sm="45%">
+    <div style="text-align:center">
+      <a mat-icon-button class="btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i></a>
+      <a mat-icon-button class="btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+      <a mat-icon-button class="btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+      <a mat-icon-button class="btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+      <a mat-icon-button class="btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+      <a mat-icon-button class="btn-mail" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+    </div>
+  </div>
+<div fxFlex="100" fxFlexAlign="center center">
+    <div style="text-align:center;">
+      <p>© Copyright 2018 Tandoori Pizza</p>
+    </div>
+  </div>
+</div>
